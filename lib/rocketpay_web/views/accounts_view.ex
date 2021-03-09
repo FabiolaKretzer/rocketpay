@@ -10,7 +10,7 @@ defmodule RocketpayWeb.AccountsView do
         }
       }) do
     %{
-      message: "Balance changed successfully",
+      message: "Balance changed succesfully",
       account: %{
         id: account_id,
         balance: balance
@@ -24,18 +24,18 @@ defmodule RocketpayWeb.AccountsView do
       from_account: from_account
     }
   }) do
-%{
-  message: "Transaction done successfully",
-  transaction: %{
-    from_account: %{
-      id: to_account.id,
-      balance: to_account.balance
-    },
-    to_account: %{
-      id: from_account.id,
-      balance: from_account.balance
+    %{
+      message: "Transaction done succesfully",
+      transaction: %{
+        from_account: %{
+          id: to_account.id,
+          balance: to_account.balance
+        },
+        to_account: %{
+          id: from_account.id,
+          balance: from_account.balance
+        }
+      }
     }
-  }
-}
-end
+  end
 end
